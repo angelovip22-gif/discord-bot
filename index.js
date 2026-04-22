@@ -4,7 +4,9 @@ const http = require("http");
 http.createServer((req, res) => {
   res.writeHead(200);
   res.end("Bot online");
-}).listen(process.env.PORT || 3000);
+}).listen(process.env.PORT  3000, "0.0.0.0", () => {
+  console.log("HTTP server on port " + (process.env.PORT  3000));
+});
 
 
 const TOKEN = process.env.DISCORD_TOKEN;
