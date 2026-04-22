@@ -1,11 +1,12 @@
 const { Client } = require("discord.js-selfbot-v13");
 const fs = require("fs");
 const http = require("http");
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 http.createServer((req, res) => {
   res.writeHead(200);
   res.end("Bot online");
-}).listen(process.env.PORT  3000, "0.0.0.0", () => {
-  console.log("HTTP server on port " + (process.env.PORT  3000));
+}).listen(PORT, "0.0.0.0", () => {
+  console.log("HTTP server on port " + PORT);
 });
 
 
