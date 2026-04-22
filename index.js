@@ -1,5 +1,11 @@
 const { Client } = require("discord.js-selfbot-v13");
 const fs = require("fs");
+const http = require("http");
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("Bot online");
+}).listen(process.env.PORT || 3000);
+
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const GAME = "Minecraft";
